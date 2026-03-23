@@ -8,7 +8,7 @@
 
 ## PORTFOLIO OVERVIEW
 
-This portfolio showcases projects created throughout my academic journey at CIIT - College of Arts and Technology, demonstrating expertise in full-stack web development, quality assurance, machine learning, and emerging technologies. As a Dean's List student currently pursuing a Bachelor of Science in Information Technology, I am committed to building a strong professional presence through quality projects and continuous skill development.
+This portfolio showcases projects created throughout my academic journey at CIIT - College of Arts and Technology, demonstrating expertise in full-stack web development, quality assurance, machine learning, and emerging technologies. As a Dean's List student currently pursuing a Bachelor of Science in Computer Science, I am committed to building a strong professional presence through quality projects and continuous skill development.
 
 ---
 

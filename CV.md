@@ -1,7 +1,7 @@
 # Miguel Pogio
 
 **Email:** isiahmigueldgarcia@gmail.com | **Phone:** [09293134268] | **Location:** Kamuning, Quezon City, Philippines  
-**GitHub:** [https://github.com/MIGUELPOGIO](https://github.com/MIGUELPOGIO) | **Portfolio:** Resume Website | **LinkedIn:** [https://www.linkedin.com/in/isiah-garcia-5425b539a/](https://www.linkedin.com/in/isiah-garcia-5425b539a/)
+**GitHub:** [https://github.com/MIGUELPOGIO](https://github.com/MIGUELPOGIO) | **Portfolio:** http://127.0.0.1:5500/index.html | **LinkedIn:** [https://www.linkedin.com/in/isiah-garcia-5425b539a/](https://www.linkedin.com/in/isiah-garcia-5425b539a/)
 
 ---
 
@@ -43,17 +43,17 @@ Passionate computer science student and aspiring full-stack developer with exper
 
 ## CERTIFICATIONS & CREDENTIALS
 
-- [Introduction to Cyber Security] - [Cisco Network], [2026]
-- [CyberSecurity Fundamentals ] - [IBM Skillsbuild], [2026]
+- Introduction to Cyber Security - Cisco Network Academy, 2026
+- CyberSecurity Fundamentals - IBM Skillsbuild, 2026
 
 
 ---
 
 ## EDUCATION
 
-### [Degree Name] in [Field of Study]
-**[University/Institution Name]**, [City, Country]  
-**Graduation Date:** [Month Year]
+### Bachelor of Science in Computer Science
+**CIIT - College of Arts and Technology**, Kamuning, Quezon City  
+**Expected Graduation:** 2026/2027
 
 - **Current GPA:** 3.3/4.0
 - **Academic Recognition:** Dean's Lister

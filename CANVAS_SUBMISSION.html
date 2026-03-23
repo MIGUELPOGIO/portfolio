@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Pogio - Canvas Submission</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .submission-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .submission-info h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .info-row {
+            margin: 10px 0;
+            padding: 5px 0;
+        }
+        
+        .label {
+            font-weight: bold;
+            color: #333;
+            display: inline-block;
+            width: 150px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-content {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .cv-link {
+            background: white;
+            padding: 20px;
+            border: 2px dashed #667eea;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .cv-link a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background 0.3s;
+        }
+        
+        .cv-link a:hover {
+            background: #764ba2;
+        }
+        
+        .link-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .link-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .link-item a {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            word-break: break-all;
+            border-bottom: 2px solid #667eea;
+            transition: color 0.3s;
+        }
+        
+        .link-item a:hover {
+            color: #764ba2;
+        }
+        
+        .description {
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+        
+        .projects-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .projects-table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .projects-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .projects-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            border-bottom: 1px solid #667eea;
+        }
+        
+        .project-link:hover {
+            color: #764ba2;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        
+        .print-button {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+        
+        .print-button button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .print-button button:hover {
+            background: #764ba2;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .print-button {
+                display: none;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Miguel Pogio</h1>
+            <p>Professional Portfolio & CV Submission</p>
+        </div>
+        
+        <!-- Submission Info -->
+        <div class="submission-info">
+            <h3>📋 Submission Information</h3>
+            <div class="info-row">
+                <span class="label">Student Name:</span> Miguel Pogio
+            </div>
+            <div class="info-row">
+                <span class="label">Course:</span> [Your Course Name]
+            </div>
+            <div class="info-row">
+                <span class="label">Submission Date:</span> March 23, 2026
+            </div>
+            <div class="info-row">
+                <span class="label">School:</span> CIIT - College of Arts and Technology, Kamuning, QC
+            </div>
+            <div class="info-row">
+                <span class="label">Email:</span> isiahmigueldgarcia@gmail.com
+            </div>
+            <div class="info-row">
+                <span class="label">GitHub:</span> https://github.com/MIGUELPOGIO
+            </div>
+            <div class="info-row">
+                <span class="label">LinkedIn:</span> https://www.linkedin.com/in/isiah-garcia-5425b539a/
+            </div>
+        </div>
+        
+        <!-- Print Instructions -->
+        <div class="print-button">
+            <p><strong>💡 Tip:</strong> Click the button below to print/save this as PDF for Canvas submission</p>
+            <button onclick="window.print()">🖨️ Print / Save as PDF</button>
+        </div>
+        
+        <!-- Section 1: CV (PDF Format) -->
+        <div class="section">
+            <h2 class="section-title">1️⃣ CV (PDF Format)</h2>
+            
+            <div class="section-content">
+                <div class="cv-link">
+                    <p style="margin-bottom: 15px; color: #666;">Click below to view or download CV</p>
+                    <a href="CV.md" download="Miguel_Pogio_CV.txt">📄 Download CV (Markdown Format)</a>
+                </div>
+                
+                <div style="background: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                    <h4 style="color: #667eea; margin-bottom: 10px;">📋 CV Preview:</h4>
+                    <p><strong>Name:</strong> Miguel Pogio</p>
+                    <p><strong>Email:</strong> isiahmigueldgarcia@gmail.com</p>
+                    <p><strong>Location:</strong> Kamuning, Quezon City, Philippines</p>
+                    <p><strong>Phone:</strong> 09293134268</p>
+                    <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+                    
+                    <h4 style="color: #667eea; margin: 15px 0 10px 0;">Education:</h4>
+                    <p><strong>Bachelor of Science in Computer Science</strong><br>
+                    CIIT - College of Arts and Technology<br>
+                    Expected Graduation: 2026/2027<br>
+                    Current GPA: 3.3/4.0<br>
+                    <span class="status-badge">Dean's Lister</span></p>
+                    
+                    <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+                    
+                    <h4 style="color: #667eea; margin: 15px 0 10px 0;">Top Skills:</h4>
+                    <p>
+                        <strong>Programming:</strong> JavaScript (Advanced), PHP (Intermediate), Python (Intermediate), Blade/Laravel (Advanced)<br>
+                        <strong>Web Dev:</strong> HTML5, CSS3, Full-Stack Development, Database Design<br>
+                        <strong>Tools:</strong> Git/GitHub, VSCode, Jupyter Notebook, Firebase, MySQL
+                    </p>
+                    
+                    <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+                    
+                    <h4 style="color: #667eea; margin: 15px 0 10px 0;">Featured Projects:</h4>
+                    <p>
+                        ✓ Retail-Testing-Project (JavaScript, Testing)<br>
+                        ✓ Restaurant-Rating-Prediction (ML, Python)<br>
+                        ✓ GymManagementSystem (Full-Stack PHP)<br>
+                        ✓ inventory-management (JavaScript)
+                    </p>
+                </div>
+                
+                <p style="margin-top: 20px; color: #666; font-size: 0.9em;">
+                    <strong>Note:</strong> To convert CV to PDF: Right-click CV.md → Open with Word/Google Docs → Export as PDF, or use online Markdown to PDF converter
+                </p>
+            </div>
+        </div>
+        
+        <!-- Section 2: Portfolio Link -->
+        <div class="section">
+            <h2 class="section-title">2️⃣ Portfolio Link</h2>
+            
+            <div class="section-content">
+                <div class="link-item">
+                    <h4>🌐 Live Portfolio Website</h4>
+                    <p>Status: <span class="status-badge">Ready to Deploy</span></p>
+                    <a href="index.html" target="_blank">View Local Portfolio (index.html)</a>
+                    <div class="description">
+                        <strong>After GitHub deployment your link will be:</strong><br>
+                        https://MIGUELPOGIO.github.io/portfolio
+                    </div>
+                </div>
+                
+                <div class="link-item">
+                    <h4>📚 Portfolio Markdown</h4>
+                    <a href="PORTFOLIO.md" target="_blank">View Portfolio.md</a>
+                    <div class="description">
+                        Comprehensive portfolio document with all projects, skills, and achievements
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 3: Project Repository Links -->
+        <div class="section">
+            <h2 class="section-title">3️⃣ Project Repository Links</h2>
+            
+            <div class="section-content">
+                <h4 style="color: #667eea; margin-bottom: 15px;">Featured Projects:</h4>
+                
+                <table class="projects-table">
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Technologies</th>
+                            <th>Repository Link</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Retail-Testing-Project</strong></td>
+                            <td>JavaScript</td>
+                            <td><a href="https://github.com/MIGUELPOGIO/Retail-Testing-Project" target="_blank" class="project-link">GitHub →</a></td>
+                            <td><span class="status-badge">Maintained</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Restaurant-Rating-Prediction</strong></td>
+                            <td>Python, ML</td>
+                            <td><a href="https://github.com/MIGUELPOGIO/Restaurant-Rating-Prediction" target="_blank" class="project-link">GitHub →</a></td>
+                            <td><span class="status-badge">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>GymManagementSystem</strong></td>
+                            <td>PHP, MySQL, JS</td>
+                            <td><a href="https://github.com/MIGUELPOGIO/GymManagementSystem" target="_blank" class="project-link">GitHub →</a></td>
+                            <td><span class="status-badge">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>inventory-management</strong></td>
+                            <td>JavaScript</td>
+                            <td><a href="https://github.com/MIGUELPOGIO/inventory-management" target="_blank" class="project-link">GitHub →</a></td>
+                            <td><span class="status-badge">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h4 style="color: #667eea; margin: 30px 0 15px 0;">Additional Projects (13 total):</h4>
+                
+                <div class="link-item">
+                    <h4>Laravel & PHP Development</h4>
+                    <p>
+                        <a href="https://github.com/MIGUELPOGIO/cs401-midterm" target="_blank" class="project-link">cs401-midterm</a> |
+                        <a href="https://github.com/MIGUELPOGIO/Eloquent-Practice" target="_blank" class="project-link">Eloquent-Practice</a> |
+                        <a href="https://github.com/MIGUELPOGIO/LaravelWeek3" target="_blank" class="project-link">LaravelWeek3</a>
+                    </p>
+                </div>
+                
+                <div class="link-item">
+                    <h4>JavaScript & Frontend</h4>
+                    <p>
+                        <a href="https://github.com/MIGUELPOGIO/FirebaseDemo" target="_blank" class="project-link">FirebaseDemo</a> |
+                        <a href="https://github.com/MIGUELPOGIO/web-hooks-demo" target="_blank" class="project-link">web-hooks-demo</a>
+                    </p>
+                </div>
+                
+                <div class="link-item">
+                    <p><strong>View all projects:</strong> <a href="https://github.com/MIGUELPOGIO?tab=repositories" target="_blank" class="project-link">github.com/MIGUELPOGIO</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Summary -->
+        <div class="section">
+            <h2 class="section-title">✅ Submission Checklist</h2>
+            
+            <div class="section-content">
+                <p style="margin-bottom: 15px;"><strong>Complete the following for canvas submission:</strong></p>
+                <ul style="margin-left: 20px; line-height: 2;">
+                    <li>☐ Download and convert <strong>CV.md to PDF</strong> → Upload to Canvas</li>
+                    <li>☐ Copy <strong>Portfolio Link</strong> → https://MIGUELPOGIO.github.io/portfolio (after deployment)</li>
+                    <li>☐ Copy all <strong>Project Repository Links</strong> → Paste in submission document</li>
+                    <li>☐ Test all links before submission</li>
+                    <li>☐ Deploy to GitHub Pages for permanent public URL</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Miguel Pogio</strong> | Computer Science Student | CIIT Dean's Lister</p>
+            <p>Generated: March 23, 2026</p>
+            <p>📧 isiahmigueldgarcia@gmail.com | 🐙 github.com/MIGUELPOGIO | 💼 linkedin.com/in/isiah-garcia-5425b539a</p>
+        </div>
+    </div>
+</body>
+</html>
