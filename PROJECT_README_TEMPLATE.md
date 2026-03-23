@@ -219,7 +219,7 @@ This project is licensed under the [MIT/Apache/GPL] License - see the [LICENSE](
 
 ## Contact
 
-**Author:** Miguel Pogio  
+**Author:** Isiah Miguel Garcia  
 **GitHub:** [@MIGUELPOGIO](https://github.com/MIGUELPOGIO)  
 **Email:** [your.email@example.com]  
 **Portfolio:** [Your portfolio link]

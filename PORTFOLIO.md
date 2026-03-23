@@ -1,4 +1,4 @@
-# Technical Portfolio - Miguel Pogio
+# Technical Portfolio - Isiah Miguel Garcia
 
 **Portfolio Website:** [Link to your portfolio site - optional but recommended]  
 **GitHub:** https://github.com/MIGUELPOGIO  
