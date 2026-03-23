@@ -1,4 +1,4 @@
-# Miguel Pogio
+# Isiah Miguel Garcia
 
 **Email:** isiahmigueldgarcia@gmail.com | **Phone:** [09293134268] | **Location:** Kamuning, Quezon City, Philippines  
 **GitHub:** [https://github.com/MIGUELPOGIO](https://github.com/MIGUELPOGIO) | **Portfolio:** http://127.0.0.1:5500/index.html | **LinkedIn:** [https://www.linkedin.com/in/isiah-garcia-5425b539a/](https://www.linkedin.com/in/isiah-garcia-5425b539a/)
